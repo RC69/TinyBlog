@@ -1,9 +1,9 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'baselineOfTinyBlog',
-      #directory : src',
+      #baseline : 'TinyBlog',
+      #directory : 'src',
       #platforms : [ #pharo ]
     }
   ]
- }
+}
