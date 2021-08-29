@@ -10,14 +10,27 @@ Class {
 	#category : #'TinyBlog-Tests'
 }
 
-{ #category : #setup }
+{ #category : #running }
 TBBlogTest >> setUp [
-	previousRepository := VORepository current.VORepository setRepository: VOMemoryRepository new.blog := TBBlog current.first := TBPost title: 'A title' text: 'A text' category: 'First Category'.blog writeBlogPost: first.post := (TBPost title: 'Another title' text: 'Another text'category: 'Second Category') beVisible
+super setUp.
+	previousRepository := VORepository current.
+	VORepository setRepository: VOMemoryRepository new.
+	blog := TBBlog current.
+	first := TBPost
+		title: 'A title'
+		text: 'A text'
+		category: 'First Category'.
+	blog writeBlogPost: first.
+	post := (TBPost
+		title: 'Another title'
+		text: 'Another text'
+		category: 'Second Category') beVisible
 ]
 
-{ #category : #setup }
+{ #category : #running }
 TBBlogTest >> tearDown [
-	VORepository setRepository: previousRepository
+	VORepository setRepository: previousRepository.
+	super tearDown 
 ]
 
 { #category : #tests }
