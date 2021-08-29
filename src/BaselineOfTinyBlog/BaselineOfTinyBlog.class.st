@@ -9,10 +9,11 @@ BaselineOfTinyBlog >> baseline: spec [
 	<baseline>
 	spec
 		for: #common
-		do: [ 
-			spec package: 'TinyBlog' with: [ spec requires: #('TinyBlog') ].
+		do: [
+			"Packages"
 			spec
-				package: 'TinyBlog-Tests'
-				with: [ spec requires: #('TinyBlog') ].
-			spec group: 'default' with: #('TinyBlog' 'TinyBlog-Tests') ]
+				package: 'TinyBlog';
+				package: 'TinyBlog-Tests' with: [ spec requires: #('TinyBlog') ] ]
+
+				
 ]
