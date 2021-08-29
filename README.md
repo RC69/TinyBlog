@@ -5,6 +5,8 @@ Destiné au débutant ...
 
 
 ### Charger le code :
+Setting Iceberg: Enable Metacello integration
+
 ```Metacello new
 repository: 'github://RC69/TinyBlog/src';
 baseline:'TinyBlog';
