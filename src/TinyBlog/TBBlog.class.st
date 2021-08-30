@@ -100,7 +100,8 @@ TBBlog class >> initializeLocalhostMongoDB [
 ]
 
 { #category : #voyage }
-TBBlog class >> initializeVoyageOnMemoryDB [ VOMemoryRepository new enableSingleton
+TBBlog class >> initializeVoyageOnMemoryDB [ VOMemoryRepository
+ new enableSingleton
 ]
 
 { #category : #voyage }
