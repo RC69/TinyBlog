@@ -11,9 +11,9 @@ BaselineOfTinyBlog >> baseline: spec [
 		for: #common
 		do: [
 			"Packages"
-			spec
-				package: 'TinyBlog';
-				package: 'TinyBlog-Tests' with: [ spec requires: #('TinyBlog') ] ]
+				spec baseline: 'PharoWeb' with: [ spec repository: 'github://LucFabresse/PharoWeb/src' ].
+				spec package: 'TinyBlog' with: [ spec requires: #('PharoWeb') ].
+				spec package: 'TinyBlog-Tests' with: [ spec requires: #('TinyBlog') ] ]
 
 				
 ]
