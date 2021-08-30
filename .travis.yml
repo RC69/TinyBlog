@@ -5,10 +5,16 @@ sudo: false
 os:
   - linux
 
+env:
+  - sh=bash
+
+services:
+  - docker
+
+before_install:
+  - docker run --name mongo -p 27017:27017 -d mongo
+
 # Select compatible Smalltalk image(s)
 smalltalk:
-
-  - Pharo64-alpha
-  - Pharo64-stable
   - Pharo64-8.0
   - Pharo64-9.0
